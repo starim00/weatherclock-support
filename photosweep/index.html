@@ -3,58 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PhotoSweep - 技术支持</title>
-  <meta name="description" content="PhotoSweep 技术支持与常见问题">
+  <title>PhotoSweep Support / 技术支持</title>
+  <meta name="description" content="PhotoSweep support, troubleshooting, privacy information, and support request links.">
   <style>
     :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif; }
+    * { box-sizing: border-box; }
     body { margin: 0; background: linear-gradient(145deg, #eef6ff, #f3efff 55%, #effffb); color: #17171c; }
-    main { max-width: 720px; margin: 0 auto; padding: 72px 24px; }
+    main { max-width: 780px; margin: 0 auto; padding: 64px 24px; }
     .icon { width: 88px; height: 88px; border-radius: 22px; box-shadow: 0 14px 32px #4338ca33; }
-    h1 { margin: 24px 0 8px; font-size: 40px; letter-spacing: -.04em; }
-    .lead { color: #64646d; font-size: 19px; line-height: 1.6; }
-    section { margin-top: 32px; padding: 24px; background: #ffffffb8; border: 1px solid #ffffff; border-radius: 24px; box-shadow: 0 16px 48px #3730a30d; }
-    h2 { margin: 0 0 14px; font-size: 20px; }
+    h1 { margin: 24px 0 8px; font-size: clamp(34px, 8vw, 44px); letter-spacing: -.04em; }
+    .lead { color: #64646d; font-size: 18px; line-height: 1.65; }
+    section { margin-top: 28px; padding: 24px; background: #ffffffc7; border: 1px solid #ffffff; border-radius: 24px; box-shadow: 0 16px 48px #3730a30d; }
+    h2 { margin: 0 0 14px; font-size: 21px; }
+    h3 { margin: 22px 0 8px; font-size: 17px; }
     p, li { line-height: 1.75; }
-    a { color: #5146e5; font-weight: 600; text-decoration: none; }
-    footer { margin-top: 32px; color: #777780; font-size: 14px; }
+    a { color: #5146e5; font-weight: 650; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 8px; }
+    .button { display: inline-block; padding: 12px 16px; border-radius: 14px; background: #5146e5; color: white; text-decoration: none; }
+    .button.secondary { background: #5146e51a; color: #5146e5; }
+    .meta { color: #777780; font-size: 14px; }
+    footer { margin-top: 30px; color: #777780; font-size: 14px; }
     @media (prefers-color-scheme: dark) {
       body { background: linear-gradient(145deg, #111827, #17132d 55%, #0c1917); color: #f5f5f7; }
-      .lead, footer { color: #b3b3bc; }
+      .lead, .meta, footer { color: #b3b3bc; }
       section { background: #ffffff0d; border-color: #ffffff12; }
-      a { color: #9d97ff; }
+      a { color: #aaa5ff; }
+      .button { color: white; }
+      .button.secondary { background: #aaa5ff24; color: #c9c6ff; }
     }
   </style>
 </head>
 <body>
   <main>
-    <img class="icon" src="app-icon.png" alt="PhotoSweep 图标">
-    <h1>PhotoSweep</h1>
-    <p class="lead">在设备上发现重复照片、模糊照片、截图与值得保留的精彩画面，让相册整理更轻松。</p>
+    <img class="icon" src="app-icon.png" alt="PhotoSweep app icon">
+    <h1>PhotoSweep Support</h1>
+    <p class="lead">照片整理、购买恢复与隐私问题的官方技术支持页面。<br>Official support for photo organization, purchase restoration, and privacy questions.</p>
+    <p class="meta">Updated / 更新日期：2026-07-25</p>
 
-    <section>
-      <h2>使用帮助</h2>
-      <ol>
-        <li>首次打开时允许 PhotoSweep 完全访问照片。</li>
-        <li>在“清理”页扫描相册，查看重复照片、模糊照片和截图。</li>
-        <li>在“智能”页分析照片质量和可能包含敏感信息的图片。</li>
-        <li>删除前请逐项确认；系统会将删除的照片放入“最近删除”。</li>
-      </ol>
+    <section id="contact">
+      <h2>联系支持 / Request Support</h2>
+      <p>如果问题没有在下方解决，请创建支持请求，并附上设备型号、iOS 版本、PhotoSweep 版本和复现步骤。请勿上传私人照片、证件号码或付款信息。</p>
+      <p>If the steps below do not resolve the issue, create a support request with your device model, iOS version, PhotoSweep version, and reproduction steps. Do not attach private photos, identity numbers, or payment information.</p>
+      <div class="actions">
+        <a class="button" href="https://github.com/starim00/weatherclock-support/issues/new">创建支持请求 / New Support Request</a>
+        <a class="button secondary" href="https://github.com/starim00/weatherclock-support/issues">查看处理进度 / Existing Requests</a>
+      </div>
+      <p class="meta">Support requests are reviewed by the PhotoSweep developer. This page does not collect form data.</p>
     </section>
 
     <section>
-      <h2>常见问题</h2>
-      <p><strong>为什么需要完全访问照片？</strong><br>完整扫描、相似照片分组和删除操作需要照片图库权限。所有分析均在设备上完成。</p>
-      <p><strong>照片会上传吗？</strong><br>不会。PhotoSweep 不会上传照片、识别到的文字或扫描结果。</p>
-      <p><strong>如何恢复购买？</strong><br>前往 App 内“设置”，点按“恢复购买”。购买由 Apple ID 与 App Store 管理。</p>
+      <h2>快速排查 / Troubleshooting</h2>
+      <h3>无法读取照片 / Photos are unavailable</h3>
+      <p>打开“设置 → 隐私与安全性 → 照片 → PhotoSweep”，选择“完全访问”。如果此前拒绝过授权，PhotoSweep 会提供前往系统设置的入口。</p>
+      <p>Open Settings → Privacy &amp; Security → Photos → PhotoSweep and select Full Access. If access was previously denied, PhotoSweep provides a link to system Settings.</p>
+
+      <h3>扫描没有包含全部照片 / Some photos are missing</h3>
+      <p>有限访问只会包含已选择的照片。仅存于 iCloud 的项目需要先下载到设备；PhotoSweep 会在下载前征求确认。</p>
+      <p>Limited Access includes only selected photos. iCloud-only items must be downloaded to the device, and PhotoSweep asks before downloading them.</p>
+
+      <h3>恢复永久版 / Restore the lifetime purchase</h3>
+      <p>在 PhotoSweep 的“设置”页点按“恢复购买”。购买由 App Store 和当前 Apple Account 管理，开发者不会接触付款资料。</p>
+      <p>Tap Restore Purchases in PhotoSweep Settings. Purchases are managed by the App Store and the current Apple Account; the developer does not receive payment details.</p>
     </section>
 
     <section>
-      <h2>联系支持</h2>
-      <p>如遇到问题，请在 <a href="https://github.com/starim00/weatherclock-support/issues">GitHub Issues</a> 中说明设备型号、iOS 版本和复现步骤。</p>
-      <p><a href="privacy.html">查看隐私政策</a></p>
+      <h2>权限与隐私 / Permission &amp; Privacy</h2>
+      <p>首次使用照片功能时，点按“继续”后会显示 iOS 的系统照片权限请求。所有照片分析均在设备上完成，照片和视频不会上传到开发者服务器。</p>
+      <p>When a photo feature is first used, tapping Continue presents the iOS system photo permission request. All photo analysis is performed on the device; photos and videos are not uploaded to a developer server.</p>
+      <p><strong>PhotoSweep 不执行人脸检测、识别、身份比对或人脸评分，也不生成、保存或共享人脸数据。</strong></p>
+      <p><strong>PhotoSweep does not detect, recognize, identify, compare, or score faces and does not generate, store, or share face data.</strong></p>
+      <p><a href="privacy.html">查看完整隐私政策 / Read the full Privacy Policy</a></p>
     </section>
 
-    <footer>© 2026 tiance hu</footer>
+    <footer>© 2026 tiance hu · PhotoSweep</footer>
   </main>
 </body>
 </html>
