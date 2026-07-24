@@ -3,62 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PhotoSweep - 隐私政策</title>
-  <meta name="description" content="PhotoSweep 隐私政策">
+  <title>PhotoSweep Privacy Policy / 隐私政策</title>
+  <meta name="description" content="PhotoSweep privacy policy, including photo processing, local storage, retention, deletion, and face data practices.">
   <style>
     :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif; }
+    * { box-sizing: border-box; }
     body { margin: 0; background: #f6f7fb; color: #17171c; }
-    main { max-width: 760px; margin: 0 auto; padding: 64px 24px; }
+    main { max-width: 800px; margin: 0 auto; padding: 56px 24px; }
     article { padding: 32px; background: #fff; border-radius: 24px; box-shadow: 0 16px 48px #1118270d; }
-    h1 { margin-top: 0; font-size: 36px; letter-spacing: -.03em; }
-    h2 { margin-top: 30px; font-size: 20px; }
+    h1 { margin-top: 0; font-size: clamp(30px, 7vw, 40px); letter-spacing: -.03em; }
+    h2 { margin-top: 30px; font-size: 21px; }
     p, li { line-height: 1.8; }
     .updated { color: #71717a; }
-    a { color: #5146e5; font-weight: 600; text-decoration: none; }
+    .notice { padding: 18px; border-radius: 16px; background: #5146e510; border: 1px solid #5146e526; }
+    a { color: #5146e5; font-weight: 650; }
     @media (prefers-color-scheme: dark) {
       body { background: #101116; color: #f5f5f7; }
       article { background: #1b1c22; box-shadow: none; }
       .updated { color: #a1a1aa; }
-      a { color: #9d97ff; }
+      .notice { background: #aaa5ff12; border-color: #aaa5ff24; }
+      a { color: #aaa5ff; }
     }
   </style>
 </head>
 <body>
   <main>
     <article>
-      <h1>PhotoSweep 隐私政策</h1>
-      <p class="updated">更新日期：2026 年 7 月 17 日</p>
+      <h1>PhotoSweep Privacy Policy<br>PhotoSweep 隐私政策</h1>
+      <p class="updated">Effective / 更新日期：2026-07-25</p>
 
-      <p>PhotoSweep 尊重并保护你的隐私。应用无需注册账号，不使用广告或第三方分析服务，也不会出售或共享个人信息。</p>
+      <p>PhotoSweep 无需注册账号，不包含广告或第三方分析 SDK，不出售个人信息。PhotoSweep does not require an account, contains no advertising or third-party analytics SDK, and does not sell personal information.</p>
 
-      <h2>照片与视频</h2>
-      <p>在你授权后，PhotoSweep 会访问系统照片图库，用于查找重复或相似照片、检测模糊照片和截图、进行照片质量评分，以及发现可能包含敏感信息的图片。</p>
+      <h2>Face Data / 人脸数据</h2>
+      <div class="notice">
+        <p><strong>PhotoSweep does not collect or process face data.</strong> The current version does not detect faces, recognize people, identify or compare individuals, create biometric templates, or calculate face-quality scores. No face data or face-derived value is generated, stored, retained, transmitted, or shared with any third party.</p>
+        <p><strong>PhotoSweep 不收集或处理人脸数据。</strong>当前版本不检测人脸、不识别人像、不进行身份识别或比对、不创建生物特征模板，也不计算人脸质量分数。应用不会生成、保存、保留、传输或向第三方共享任何人脸数据或人脸派生值。</p>
+      </div>
+
+      <h2>Photos and Videos / 照片与视频</h2>
+      <p>在用户通过 iOS 系统权限弹窗授权后，PhotoSweep 才会访问照片图库，用于查找重复或相似照片、检测模糊照片和截图、计算非生物特征的照片质量指标，以及发现可能包含敏感信息的图片。</p>
+      <p>PhotoSweep accesses the photo library only after authorization through the iOS system prompt. Access is used to find duplicate or similar photos, detect blurry photos and screenshots, calculate non-biometric image-quality metrics, and identify images that may contain sensitive information.</p>
       <ul>
-        <li>照片、视频和缩略图不会上传到开发者服务器。</li>
-        <li>图像分析通过 Apple 提供的系统框架在设备上完成。</li>
-        <li>文字识别结果不会被保存或记录。</li>
-        <li>扫描结果仅存储在你的设备上。</li>
+        <li>照片、视频和缩略图不会上传到开发者服务器。Photos, videos, and thumbnails are never uploaded to a developer server.</li>
+        <li>分析通过 Apple 系统框架在设备上完成。Analysis is performed on-device using Apple system frameworks.</li>
+        <li>OCR 原文、证件号码、银行卡号、验证码和二维码内容只在分析时短暂存在于内存，不会保存或写入日志。Recognized text and barcode payloads are transient in memory and are not stored or logged.</li>
       </ul>
 
-      <h2>照片删除</h2>
-      <p>PhotoSweep 仅在你明确确认后请求系统删除所选照片。被删除的项目会进入系统相册的“最近删除”，恢复与永久删除均由系统相册管理。</p>
+      <h2>Local Results and Retention / 本地结果与保留期限</h2>
+      <p>应用可能在设备上保存照片资源标识、尺寸、非生物特征质量分数、重复分组和经过概括的敏感类别。这些结果仅用于恢复扫描进度和展示整理结果，不包含照片副本、OCR 原文或二维码内容。</p>
+      <p>The app may store asset identifiers, dimensions, non-biometric quality scores, duplicate groups, and redacted sensitivity categories on the device. These results restore scan progress and display organization results; they do not include photo copies, OCR source text, or barcode contents.</p>
+      <p>本地结果会保留到用户在 PhotoSweep 设置中重置扫描数据、相关照片被移除或应用被卸载。Local results remain until the user resets scan data in PhotoSweep Settings, the related photo is removed, or the app is uninstalled.</p>
 
-      <h2>购买信息</h2>
-      <p>永久版购买和恢复购买由 Apple App Store 处理。PhotoSweep 只读取 Apple 提供的购买状态，不会获得或存储你的支付卡号、账单资料或 Apple ID 密码。</p>
+      <h2>Deletion and Permission Control / 删除与权限控制</h2>
+      <p>用户可以在 PhotoSweep 设置中重置扫描数据，也可以随时在“设置 → 隐私与安全性 → 照片”中修改或撤销照片权限。PhotoSweep 仅在用户明确选择项目并确认后请求系统隐藏或删除照片。</p>
+      <p>Users can reset scan data in PhotoSweep Settings and can change or revoke photo access in Settings → Privacy &amp; Security → Photos. PhotoSweep requests hiding or deletion only after the user selects items and confirms the action.</p>
 
-      <h2>数据收集</h2>
-      <p>开发者不会从 PhotoSweep 收集个人数据、照片内容、设备标识符、位置、联系人或使用记录。</p>
+      <h2>Sharing and Third Parties / 共享与第三方</h2>
+      <p>PhotoSweep 不向开发者或第三方传输照片内容、扫描结果、使用记录、人脸数据或其他生物特征数据。购买和恢复购买由 Apple App Store 处理；应用只读取 Apple 提供的购买权益状态。</p>
+      <p>PhotoSweep does not transmit photo content, scan results, usage records, face data, or other biometric data to the developer or any third party. Purchases and restoration are handled by the Apple App Store; the app reads only the entitlement status provided by Apple.</p>
 
-      <h2>权限管理</h2>
-      <p>你可以随时在“设置 → 隐私与安全性 → 照片”中修改或撤销 PhotoSweep 的照片访问权限。撤销权限后，依赖照片图库的功能将不可用。</p>
+      <h2>Contact / 联系方式</h2>
+      <p>隐私或技术支持问题可通过 <a href="https://github.com/starim00/weatherclock-support/issues/new">PhotoSweep Support Request</a> 提交。提交时请勿附加私人照片、证件号码或付款信息。</p>
+      <p>Privacy and support questions can be submitted through <a href="https://github.com/starim00/weatherclock-support/issues/new">PhotoSweep Support Request</a>. Do not attach private photos, identity numbers, or payment information.</p>
 
-      <h2>政策更新</h2>
-      <p>如果应用功能或数据处理方式发生变化，本页面会同步更新，并标明新的更新日期。</p>
-
-      <h2>联系我们</h2>
-      <p>如对隐私政策有疑问，请通过 <a href="https://github.com/starim00/weatherclock-support/issues">GitHub Issues</a> 联系开发者。</p>
-
-      <p><a href="index.html">返回 PhotoSweep 技术支持</a></p>
+      <p><a href="index.html">Back to Support / 返回技术支持</a></p>
     </article>
   </main>
 </body>
